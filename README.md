@@ -1,6 +1,4 @@
 # FlaskApp
 Learning the basics of the Flask module ^_^
 
-# URL
-
-https://www.plonknatties.com/
+Find this app hosted on an Azure App Service Plan here: https://www.plonknatties.com/
