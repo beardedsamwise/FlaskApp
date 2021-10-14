@@ -7,15 +7,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    pokemon = random_pokemon()
+    pokemon = get_pokemon()
     return("<h1>RANDOM POKEMON GENERATOR</h1>"
            "Random Pokemon: " + pokemon)
 
 
-def random_pokemon():
-    int = random.randint(1, 150)
+def get_pokemon(id=None):
+    if id is None:
+        id = random.randint(1, 150)
     base_url = "https://pokeapi.co/api/v2/pokemon/"
-    random_url = base_url + str(int)
+    random_url = base_url + str(id)
     response = requests.get(random_url)
     json = response.json()
     pokemon = json.get('name')
