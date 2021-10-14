@@ -1,2 +1,6 @@
 # python virtual environment
 venv
+# pycov
+.coverage
+# pycache
+__pycache__/
